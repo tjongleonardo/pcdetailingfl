@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const serviceData = {
     exterior: {
       title: 'Exterior Detail',
-      price: '',
+      price: 'Starting at $99',
       image: 'images/IMG_6138.jpg',
       items: [
         'Foam/hand wash (safe contact wash)',
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     interior: {
       title: 'Interior Detail',
-      price: '',
+      price: 'Starting at $110',
       image: 'images/IMG_7498.jpg',
       items: [
         'Comprehensive interior vacuuming (seats, carpets, trunk, mats)',
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     full: {
       title: 'Full Detail',
-      price: '',
+      price: 'Starting at $190',
       image: 'images/IMG_7307.jpg',
       items: [
         'Foam/hand wash (safe contact wash)',
