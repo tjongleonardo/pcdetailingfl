@@ -206,10 +206,13 @@ document.addEventListener('DOMContentLoaded', () => {
       floatingMenu.classList.toggle('open');
     });
 
-    document.addEventListener('click', (e) => {
+    const closeMenu = (e) => {
       if (!floatingCtaContainer.contains(e.target)) {
         floatingMenu.classList.remove('open');
       }
-    });
+    };
+
+    document.addEventListener('click', closeMenu);
+    document.addEventListener('touchstart', closeMenu, { passive: true });
   }
 });
