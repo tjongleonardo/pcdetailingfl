@@ -185,4 +185,31 @@ document.addEventListener('DOMContentLoaded', () => {
       track.style.scrollBehavior = 'smooth';
     });
   }
+
+  // ===== FLOATING CTA SCROLL =====
+  const floatingCtaContainer = document.getElementById('floatingCtaContainer');
+  const floatingCta = document.getElementById('floatingCta');
+  const floatingMenu = document.getElementById('floatingMenu');
+
+  if (floatingCtaContainer && floatingCta && floatingMenu) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        floatingCtaContainer.classList.add('visible');
+      } else {
+        floatingCtaContainer.classList.remove('visible');
+        floatingMenu.classList.remove('open');
+      }
+    });
+
+    floatingCta.addEventListener('click', (e) => {
+      e.stopPropagation();
+      floatingMenu.classList.toggle('open');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!floatingCtaContainer.contains(e.target)) {
+        floatingMenu.classList.remove('open');
+      }
+    });
+  }
 });
